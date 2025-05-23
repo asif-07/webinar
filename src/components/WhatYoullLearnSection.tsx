@@ -67,23 +67,23 @@ export const WhatYoullLearnSection = () => {
           {modules.map((module, index) => (
             <Card 
               key={index} 
-              className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-[1.02] group overflow-hidden"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-500 hover:transform hover:scale-[1.02] group overflow-hidden"
             >
               <CardContent className="p-8">
                 <div className="flex flex-col lg:flex-row items-start lg:items-center gap-6">
                   {/* Module Number */}
-                  <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-r ${getGradientClass(module.color)} flex items-center justify-center text-white font-bold text-xl group-hover:scale-110 transition-transform duration-300`}>
+                  <div className={`flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-r ${getGradientClass(module.color)} flex items-center justify-center text-white font-bold text-xl`}>
                     {module.number}
                   </div>
                   
                   {/* Icon */}
-                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r ${getGradientClass(module.color)} flex items-center justify-center group-hover:rotate-12 transition-transform duration-300`}>
+                  <div className={`flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-r ${getGradientClass(module.color)} flex items-center justify-center`}>
                     <module.icon className="w-6 h-6 text-white" />
                   </div>
                   
                   {/* Content */}
                   <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">
+                    <h3 className="text-2xl font-bold text-white mb-3">
                       {module.title}
                     </h3>
                     <p className="text-gray-300 text-lg leading-relaxed">
@@ -92,7 +92,7 @@ export const WhatYoullLearnSection = () => {
                   </div>
                   
                   {/* Progress Line */}
-                  <div className="hidden lg:block w-24 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent group-hover:via-cyan-400 transition-all duration-500"></div>
+                  <div className="hidden lg:block w-24 h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent"></div>
                 </div>
               </CardContent>
             </Card>
