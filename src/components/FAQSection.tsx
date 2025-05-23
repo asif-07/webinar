@@ -37,7 +37,7 @@ const faqs = [
 ];
 
 export const FAQSection = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -61,11 +61,11 @@ export const FAQSection = () => {
           {faqs.map((faq, index) => (
             <Card 
               key={index}
-              className="bg-gradient-to-r from-white/5 to-white/10 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-300 overflow-hidden"
+              className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-300"
             >
               <CardContent className="p-0">
                 <button
-                  className="w-full p-6 text-left flex items-center gap-4 hover:bg-white/5 transition-colors duration-300"
+                  className="w-full p-6 text-left flex items-center gap-4 transition-colors duration-300"
                   onClick={() => toggleFAQ(index)}
                 >
                   {/* Icon */}
@@ -89,7 +89,7 @@ export const FAQSection = () => {
                 </button>
                 
                 {/* Answer */}
-                <div className={`overflow-hidden transition-all duration-300 ${
+                <div className={`transition-all duration-300 ${
                   openIndex === index ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
                 }`}>
                   <div className="p-6 pt-0 pl-20">
