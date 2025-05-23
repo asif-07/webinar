@@ -46,7 +46,7 @@ export const WhyAttendSection = () => {
         {/* Benefits Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {benefits.map((benefit, index) => (
-            <Card key={index} className="bg-gradient-to-b from-white/10 to-white/5 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
+            <Card key={index} className="bg-white/10 backdrop-blur-sm border border-white/20 hover:border-purple-500/50 transition-all duration-300 hover:transform hover:scale-105 group">
               <CardContent className="p-6 text-center">
                 {/* Icon with Gradient Background */}
                 <div className={`w-16 h-16 mx-auto mb-4 rounded-full bg-gradient-to-r ${benefit.gradient} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
@@ -54,11 +54,11 @@ export const WhyAttendSection = () => {
                 </div>
                 
                 {/* Title */}
-                <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-300 transition-colors duration-300">
+                <h3 className="text-xl font-bold text-white mb-3">
                   {benefit.title}
                 </h3>
                 
-                {/* Description */}
+                {/* Description - Making it visible by default */}
                 <p className="text-gray-300 leading-relaxed">
                   {benefit.description}
                 </p>
